@@ -4,7 +4,7 @@ An isometric pen plotter that draws an ink portrait, stroke by stroke, plus the 
 
 ![The plotter with the finished portrait](docs/figure.png)
 
-Open `site/index.html` in a browser. The machine draws the sheet on a loop; hover across the card to scrub through the plot, or use the arrow keys. The readout shows the stroke number, which pass it belongs to, whether the pen is up or down, and the pen position in millimetres.
+**[Watch it draw](https://nikitph.github.io/portrait-plotter/)** ([dark version](https://nikitph.github.io/portrait-plotter/dark.html)), or open `docs/index.html` locally. The machine draws the sheet on a loop; hover across the card to scrub through the plot, or use the arrow keys. The readout shows the stroke number, which pass it belongs to, whether the pen is up or down, and the pen position in millimetres.
 
 ## How the portrait is made
 
@@ -37,8 +37,8 @@ Expect roughly 10–20 minutes on a hobby plotter. Use a 0.3–0.5 mm fineliner;
 ## Rebuilding
 
 ```sh
-node plotter/build.mjs           # site/index.html (light)
-node plotter/build.mjs --dark    # site/index-dark.html
+node plotter/build.mjs           # docs/index.html (light)
+node plotter/build.mjs --dark    # docs/dark.html
 ```
 
 To re-trace from a photo (the original is not in this repo):
@@ -50,6 +50,10 @@ python trace/ink.py path/to/photo.jpg
 ```
 
 The crop box, GrabCut rectangle, face and hand regions and hand-traced profile in those scripts are tuned to the original photo; a new photo needs them adjusted.
+
+## License
+
+MIT, see `LICENSE`.
 
 ## Credits
 

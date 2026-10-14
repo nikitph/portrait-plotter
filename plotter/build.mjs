@@ -560,7 +560,7 @@ const body = k.plateHtml({
   body: `<div class="iso-stage" tabindex="0" role="slider" aria-label="Pen plotter: arrow keys move the plot forward and back" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100">${svg}</div>`,
 });
 
-const name = theme === "dark" ? "index-dark.html" : "index.html";
+const name = theme === "dark" ? "dark.html" : "index.html";
 const html = k.pageHtml({ title: "Pen plotter", theme, body, script: kitScript() + live, width: 820 }).replace("</style>", CSS + "</style>");
-writeFileSync(join(HERE, "..", "site", name), html);
+writeFileSync(join(HERE, "..", "docs", name), html);
 console.log("wrote", name, Math.round(html.length / 1024) + " KB", "strokes", nStrokes, "ink m", inkMetres.toFixed(2));
