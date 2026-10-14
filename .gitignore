@@ -1,0 +1,7 @@
+# the source photo and anything rasterised from it stay out of the repo
+work/
+*.jpg
+*.jpeg
+*.heic
+node_modules/
+__pycache__/
